@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+
+        <input id="text" type="text" />
+        <div class="buttons">
+            <button onclick="Calc(event)">1</button>
+            <button onclick="Calc(event)">2</button>
+            <button onclick="Calc(event)">3</button>
+            <button onclick="Calc(event)">+</button>
+            <button onclick="Calc(event)">4</button>
+            <button onclick="Calc(event)">5</button>
+            <button onclick="Calc(event)">6</button>
+            <button onclick="Calc(event)">-</button>
+            <button onclick="Calc(event)">7</button>
+            <button onclick="Calc(event)">8</button>
+            <button onclick="Calc(event)">9</button>
+            <button onclick="Calc(event)">*</button>
+            <button onclick="Calc(event)">0</button>
+            <button onclick="Calc(event)">.</button>
+            <button onclick="Eq()">=</button>
+            <button onclick="Calc(event)">/</button>
+            <button onclick="Clear()">clear</button>
+            <button onclick="Backspace()"> < </button>
+        </div>
+    </div>
+
+    <script>
+        var Val = document.querySelector("#text")
+
+        function Calc(e) {
+            Val.value += e.target.innerText;
+        }
+
+        function Eq() {
+            Val.value = eval(Val.value);
+
+        }
+
+        function Clear() {
+            Val.value = "";
+        }
+
+        function Backspace() {
+            Val.value = Val.value.slice(0, -1);
+        }
+    </script>
+</body>
+
+</html>
